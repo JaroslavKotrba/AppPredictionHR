@@ -11,7 +11,6 @@
 # http://localhost:8501
 # deactivate
 # conda env remove -n test
-# ctr+shift+p
 
 import streamlit as st
 
