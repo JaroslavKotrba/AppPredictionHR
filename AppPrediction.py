@@ -28,7 +28,7 @@ st.title("")
 
 # Image
 from PIL import Image
-image = Image.open('C:/Users/HP/Documents/HTML & CSS/data.analyst.com/images/HR.png')
+image = Image.open('./HR.png')
 st.image(image, caption='Predictea GmbH', use_column_width=True)
 
 geography_dict = {"Germany":1, "France":2, "Spain":3}
