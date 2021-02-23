@@ -51,8 +51,6 @@ def main():
         st.subheader("If so, please Log IN!")
         st.write("Special market situations require flexible and efficient solutions, be it for example the successful implementation of a new project, coping with a crisis in a timely manner or covering a sudden vacancy in a key management position. The rapid implementation of measures is crucial to success in today's dynamic economic environment!")
         st.text("")
-        st.text("")
-        st.text("")
         st.write("Copyright © 2021")
 
     elif choice == "Login":
