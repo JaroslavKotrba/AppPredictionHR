@@ -47,7 +47,7 @@ def main():
 
     choice = st.sidebar.selectbox("Menu", menu)
     if choice == "Home":
-        st.title("WELCOME RESEARCHER:")
+        st.title("PYTHON APP")
         st.title("Do you want to know your EMPLOYEES?")
         st.subheader("If so, please Log IN!")
         st.write("Special market situations require flexible and efficient solutions, be it for example the successful implementation of a new project, coping with a crisis in a timely manner or covering a sudden vacancy in a key management position. The rapid implementation of measures is crucial to success in today's dynamic economic environment!")
@@ -223,9 +223,9 @@ def main():
                 st.warning("Incorrect Username or Password!")
    
     elif choice == "About":
-        st.title("About us / Our mission:")
-        st.subheader("We can help you to predict, if and when your employees will leave your company!")
-        st.write("My name is Jaroslav Kotrba and I am a very energetic person with an analytical mindset and excellent language skills that are shaped and mastered through many international activities. Besides, I am very passionate about working with data and its visualization or transformation in an understandable manner. In year 2020 I wrote and defended my diploma thesis: 'The Systemic Risk at the Mortgage Market', which allowed me to unfold my skills in the data science area."
+        st.title("About me / My mission:")
+        st.subheader("I can help you to predict, if and when your employees will leave your company!")
+        st.write("My name is Jaroslav Kotrba and I am very passionate about working with data and its visualization or transformation in an understandable manner. In year 2020 I wrote and defended my diploma thesis: 'The Systemic Risk at the Mortgage Market', which allowed me to unfold my skills in the data science area."
                  "My passion for numbers, modeling, and predictions led me to courses linked to econometrics and statistics taught at the Faculty of Economics, where I got acquainted with data analytics. Then followed courses related to the statistics in computer science at the Faculty of Informatics that were not compulsory. However, I wanted to get a better insight and acquire more knowledge in practical data science from real IT experts."
                  "The first working experience was obtained at the Czech Embassy in Vienna. My tasks were to compile statistics related to the Austrian economy and write summarisations on them accompanied by graphic elements predominantly sent to the headquarters in Prague. Writing about Prague gives me the opportunity to mention the membership in the Economics Commission for National Economy, where I discuss and elaborate possible changes, steps, and recommendations for the government to stabilize and improve the Czech Republic's economic situation. Nowadays, I devote my time to work with software R where I love to solve new problems and challenges. As I do like R very much, I am very keen on dealing with SQL, Python, Excel, or Tableau. I am currently working by Honeywell as Data Analyst.")
 
