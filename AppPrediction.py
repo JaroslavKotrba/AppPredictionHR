@@ -1,17 +1,3 @@
-# conda
-# quit()
-# select default shell --> Reload Window
-# conda create -n enviro python=3.7
-# activate enviro
-# conda list
-
-# cd C:\Users\HP\Documents\Python Anaconda
-# python App.py
-# streamlit run AppPrediction.py
-# http://localhost:8501
-# deactivate
-# conda env remove -n test
-
 import streamlit as st
 
 import pandas as pd
