@@ -5,8 +5,7 @@ import numpy as np
 
 import os
 
-import matplotlib.pyplot as plt
-import matplotlib as matplotlib
+import matplotlib as plt
 matplotlib.use('Agg')
 
 st.title("")
