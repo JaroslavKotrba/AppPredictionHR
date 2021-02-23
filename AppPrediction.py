@@ -5,9 +5,6 @@ import numpy as np
 
 import os
 
-import matplotlib as plt
-matplotlib.use('Agg')
-
 st.title("")
 
 # Image
