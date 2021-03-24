@@ -175,6 +175,12 @@ def main():
 
                             from sklearn.model_selection import train_test_split
                             X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+                            
+                            from sklearn.preprocessing import MinMaxScaler
+                            scaler = MinMaxScaler()
+                            scaler.fit(X_train)
+                            X_train = scaler.transform(X_train) # from 0 to 1
+                            X_test = scaler.transform(X_test) # from 0 to 1
 
                             from sklearn.neighbors import KNeighborsClassifier
                             knn = KNeighborsClassifier(n_neighbors=18)
@@ -185,7 +191,8 @@ def main():
                             cm = confusion_matrix(y_test,prediction2)
                             proc = round((cm[0,0]+cm[1,1])/((sum(cm)[0]+sum(cm)[1])/100),2)
                             st.write('Accuracy: {}%'.format(proc))
-
+                            
+                            data_sample = scaler.transform(data_sample)
                             predictions = knn.predict(data_sample)
                             if predictions == 0:
                                 st.success('The employee will stay :)')
@@ -206,6 +213,12 @@ def main():
 
                             from sklearn.model_selection import train_test_split
                             X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
+                            
+                            from sklearn.preprocessing import MinMaxScaler
+                            scaler = MinMaxScaler()
+                            scaler.fit(X_train)
+                            X_train = scaler.transform(X_train) # from 0 to 1
+                            X_test = scaler.transform(X_test) # from 0 to 1
 
                             from sklearn.ensemble import RandomForestClassifier
                             rfc = RandomForestClassifier(n_estimators=600)
@@ -216,7 +229,8 @@ def main():
                             cm = confusion_matrix(y_test,prediction3)
                             proc = round((cm[0,0]+cm[1,1])/((sum(cm)[0]+sum(cm)[1])/100),2)
                             st.write('Accuracy: {}%'.format(proc))
-
+                            
+                            data_sample = scaler.transform(data_sample)
                             predictions = rfc.predict(data_sample)
                             if predictions == 0:
                                 st.success('The employee will stay :)')
