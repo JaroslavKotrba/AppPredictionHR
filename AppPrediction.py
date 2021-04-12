@@ -112,7 +112,7 @@ def main():
                     salary = st.slider("Yearly salary:",10000,200000,10000)
 
                     feature_list = [get_geography_value(geography), get_gender_value(gender), age, tenure, get_feature_value(active), salary]
-                    st.subheader("Output to be send to the model:")
+                    st.subheader("Output to be sent to the model:")
                     pretty_result = {"geography": geography, "gender": gender, "age": age, "tenure": tenure, "active": active, "salary": salary}
                     st.json(pretty_result)
 
