@@ -195,7 +195,7 @@ def main():
                             st.write('Accuracy: {}%'.format(proc))
                             
                             prob = round(knn.predict_proba(scaler.transform(data_sample))[0,0],4)
-                            st.write('Probability the employee will stay at the company: {}%'.format(prob*100))
+                            st.write('Probability the employee will stay at the company: {}%'.format(round(prob*100,2)))
                             
                             st.write(knn.predict_proba(scaler.transform(data_sample)))
                             if prob >= 0.5:
@@ -235,7 +235,7 @@ def main():
                             st.write('Accuracy: {}%'.format(proc))
                             
                             prob = round(rfc.predict_proba(scaler.transform(data_sample))[0,0],4)
-                            st.write('Probability the employee will stay at the company: {}%'.format(prob*100))
+                            st.write('Probability the employee will stay at the company: {}%'.format(round(prob*100,2)))
                             
                             st.write(rfc.predict_proba(scaler.transform(data_sample)))
                             if prob >= 0.5:
