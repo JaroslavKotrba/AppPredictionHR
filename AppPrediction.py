@@ -54,8 +54,9 @@ def main():
         st.write("Copyright © 2021")
 
     elif choice == "Login":
-        username = st.sidebar.text_input("User Name")
-        password = st.sidebar.text_input("Password", type='password')
+        username = st.sidebar.text_input("User Name (Enter: Any name)")
+        password = st.sidebar.text_input("Password (Enter: 123)", type='password')
+        st.sidebar.write('Check to ENTER')
         if st.sidebar.checkbox("Login"):
             if password in ["HR", "123"]:
                 st.success("Welcome {}".format(username))
@@ -109,7 +110,7 @@ def main():
                     age = st.number_input("Age:",1,100,18)
                     tenure = st.number_input("Years at the firm:",1,45,1)
                     active = st.radio("Is active employee:", tuple(feature_dict.keys()))
-                    salary = st.slider("Yearly salary:",10000,200000,10000)
+                    salary = st.slider("Yearly salary (EUR):",10000,200000,10000)
 
                     feature_list = [get_geography_value(geography), get_gender_value(gender), age, tenure, get_feature_value(active), salary]
                     st.subheader("Output to be sent to the model:")
