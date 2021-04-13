@@ -154,9 +154,11 @@ def main():
                             proc = round((cm[0,0]+cm[1,1])/((sum(cm)[0]+sum(cm)[1])/100),2)
                             st.write('Accuracy: {}%'.format(proc))
 
-                            data_sample = scaler.transform(data_sample)
-                            predictions = logmodel.predict(data_sample)
-                            if predictions == 0:
+                            prob = round(logmodel.predict_proba(scaler.transform(data_sample))[0,0],4)
+                            st.write('Probability the employee will stay at the company: {}%'.format(round(prob*100,2)))
+                            
+                            st.write(logmodel.predict_proba(scaler.transform(data_sample)))
+                            if prob >= 0.5:
                                 st.success('The employee will stay :)')
                             else:
                                 st.warning('The employee will leave :(')
@@ -192,9 +194,11 @@ def main():
                             proc = round((cm[0,0]+cm[1,1])/((sum(cm)[0]+sum(cm)[1])/100),2)
                             st.write('Accuracy: {}%'.format(proc))
                             
-                            data_sample = scaler.transform(data_sample)
-                            predictions = knn.predict(data_sample)
-                            if predictions == 0:
+                            prob = round(knn.predict_proba(scaler.transform(data_sample))[0,0],4)
+                            st.write('Probability the employee will stay at the company: {}%'.format(prob*100))
+                            
+                            st.write(knn.predict_proba(scaler.transform(data_sample)))
+                            if prob >= 0.5:
                                 st.success('The employee will stay :)')
                             else:
                                 st.warning('The employee will leave :(')
@@ -230,9 +234,11 @@ def main():
                             proc = round((cm[0,0]+cm[1,1])/((sum(cm)[0]+sum(cm)[1])/100),2)
                             st.write('Accuracy: {}%'.format(proc))
                             
-                            data_sample = scaler.transform(data_sample)
-                            predictions = rfc.predict(data_sample)
-                            if predictions == 0:
+                            prob = round(rfc.predict_proba(scaler.transform(data_sample))[0,0],4)
+                            st.write('Probability the employee will stay at the company: {}%'.format(prob*100))
+                            
+                            st.write(rfc.predict_proba(scaler.transform(data_sample)))
+                            if prob >= 0.5:
                                 st.success('The employee will stay :)')
                             else:
                                 st.warning('The employee will leave :(')
