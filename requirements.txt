@@ -1,4 +1,4 @@
 matplotlib==3.3.4
 numpy==1.20.0
 pandas==1.2.1
-streamlit==0.76.0
+sklearn==0.0
