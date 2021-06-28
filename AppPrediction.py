@@ -61,7 +61,7 @@ def main():
             if password in ["HR", "123"]:
                 st.success("Welcome {}".format(username))
 
-                activity = st.selectbox("CHOOSE", submenu)
+                activity = st.selectbox("CHOOSE:", submenu)
                 if activity == "Visualisation":
                     st.subheader("Data Visualisation")
                     df = pd.read_csv("HR_data.csv")
